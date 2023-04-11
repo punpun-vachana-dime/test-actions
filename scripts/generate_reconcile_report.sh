@@ -4,4 +4,4 @@ echo "Generate reconcile report"
 
 RESPONSE=$(curl -v --location $1)
 
-echo -e "\nPresigned URL: $RESPONSE"
+echo "Presigned URL: $RESPONSE"
