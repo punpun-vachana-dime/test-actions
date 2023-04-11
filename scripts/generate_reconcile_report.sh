@@ -2,6 +2,6 @@
 
 echo "Generate reconcile report"
 
-RESPONSE=$(curl --location $1)
+RESPONSE=$(curl -v --location $1)
 
 echo ${RESPONSE}
