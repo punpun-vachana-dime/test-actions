@@ -21,4 +21,4 @@ jobs:
         uses: actions/checkout@v3
       - name: Run generate reconcile report script
         shell: bash
-        run: sh scripts/generate_reconcile_report.sh '${{ inputs.report_date }}'
+        run: sh scripts/generate_reconcile_report.sh '${{ inputs.endpoint }}'
