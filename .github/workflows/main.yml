@@ -8,7 +8,7 @@ on:
         required: true
         type: string
       endpoint:
-        description: Reconcile report endpoint
+        description: Generate reconcile report endpoint
         required: true
         type: string
 
