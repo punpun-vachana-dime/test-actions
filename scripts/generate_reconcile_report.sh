@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-echo "Generate reconcile report"
+echo 'Generate reconcile report"
 
 RESPONSE=$(curl -v --location $1)
 
-echo ${RESPONSE}
+echo "$'\n'Presigned URL: $RESPONSE"
