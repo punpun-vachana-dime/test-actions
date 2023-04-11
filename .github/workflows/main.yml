@@ -1,0 +1,24 @@
+name: Generate reconcile report
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: Environment target
+        required: true
+        type: string
+      endpoint:
+        description: Reconcile report endpoint
+        required: true
+        type: string
+
+jobs:
+  run_script:
+    runs-on: [self-hosted, linux, '${{ inputs.environment }}', deployment]
+    environment: ${{ inputs.environment }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Run generate reconcile report script
+        shell: bash
+        run: sh scripts/generate_reconcile_report.sh '${{ inputs.report_date }}'
